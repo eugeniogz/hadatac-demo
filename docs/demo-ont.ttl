@@ -27,34 +27,67 @@ demo:Level a owl:Class ;
     rdfs:label "Level" ;
     ns1:definition "Level of activity." .
 
+demo:Time a owl:Class ;
+    rdfs:label "Time" ;
+    ns1:definition "Time of activity." .
+
 demo:Person a owl:Class;
     rdfs:label "Person" ;
+    ns1:definition "Person." ;
     rdfs:subClassOf sio:Human .
 
 demo:Activity a owl:Class ;
     rdfs:label "Activity" ;
     ns1:definition "Activity." .
 
+demo:activityComponents a owl:Class;
+    rdfs:label "Activity Components";
+    rdfs:subClassOf hasco:SampleIndicator.
+
 demo:activityLevel a owl:Class;
     rdfs:label "Activity Level";
+    rdfs:subClassOf demo:activityComponents .
+
+
+demo:activityOutcomes a owl:Class;
+    rdfs:label "Activity Outcomes";
     rdfs:subClassOf hasco:SampleIndicator.
 
 demo:calories rdf:type owl:ObjectProperty ;
     rdfs:label "Calories";
-    rdfs:subClassOf hasco:SampleIndicator.
+    ns1:definition  "Calories" ;
+    rdfs:subClassOf demo:activityOutcomes ;
+    rdfs:domain demo:Activity .
 
 demo:activeDuration  rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
     rdfs:label "Active Duration";
-    rdfs:subClassOf hasco:SampleIndicator.
+    ns1:definition  "Active Duration" ;
+    rdfs:subClassOf demo:activityComponents ;
+    rdfs:domain demo:Activity .
 
 demo:steps  rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
     rdfs:label "Steps";
-    rdfs:subClassOf hasco:SampleIndicator.
+    ns1:definition  "Steps" ;
+    rdfs:subClassOf demo:activityComponents ;
+    rdfs:domain demo:Activity .
 
 demo:minutes  rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
     rdfs:label "Minutes";
-    rdfs:subClassOf hasco:SampleIndicator.
+    ns1:definition  "Minutes" ;
+    rdfs:subClassOf demo:activityLevel ;
+    rdfs:domain demo:Level .
 
 demo:levelName  rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
     rdfs:label "Name";
-    rdfs:subClassOf hasco:SampleIndicator.
+    ns1:definition  "Name" ;
+    rdfs:subClassOf demo:activityLevel ;
+    rdfs:domain demo:Level .
+
+   
+demo:hasActivity rdfs:domain demo:Person ; rdfs:range demo:Activity .
+
+demo:hasLevel rdfs:domain demo:Activity ; rdfs:range demo:Level .
