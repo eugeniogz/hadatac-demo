@@ -59,6 +59,11 @@ demo:calories rdf:type owl:ObjectProperty ;
     rdfs:subClassOf demo:activityOutcomes ;
     rdfs:domain demo:Activity .
 
+demo:heartBeat rdf:type owl:ObjectProperty ;
+    rdfs:label "Heart Beat";
+    ns1:definition  "Heart Beat".
+
+
 demo:activeDuration  rdf:type owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
     rdfs:label "Active Duration";
