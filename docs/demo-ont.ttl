@@ -30,7 +30,7 @@ demo:Time a owl:Class ;
 demo:Person a owl:Class;
     rdfs:label "Person" ;
     ns1:definition "Person." ;
-    rdfs:subClassOf sio:Human .
+    rdfs:subClassOf sio:SIO_000498 .
 
 demo:Activity a owl:Class ;
     rdfs:label "Activity" ;
