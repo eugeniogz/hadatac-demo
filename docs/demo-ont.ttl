@@ -12,11 +12,7 @@
 
 <http://hadatac.org/ont/demo> a owl:Ontology ;
     rdfs:comment """Demo ontology for HADatAc""" ;
-    owl:imports <http://hadatac.org/ont/cogat/>,
-        <http://hadatac.org/ont/hasco/>,
-        <http://purl.obolibrary.org/obo/cl-basic.owl>,
-        <http://purl.obolibrary.org/obo/cmo.owl>,
-        <http://purl.obolibrary.org/obo/stato.owl>,
+    owl:imports <http://hadatac.org/ont/hasco/>,
         <http://purl.obolibrary.org/obo/uo.owl>,
         <http://semanticscience.org/resource/>,
         <http://semanticscience.org/ontology/sio-subset-labels.owl> ;
@@ -61,7 +57,8 @@ demo:calories rdf:type owl:ObjectProperty ;
 
 demo:heartBeat rdf:type owl:ObjectProperty ;
     rdfs:label "Heart Beat";
-    ns1:definition  "Heart Beat".
+    ns1:definition  "Heart Beat";
+    rdfs:subClassOf hasco:SampleIndicator.
 
 
 demo:activeDuration  rdf:type owl:ObjectProperty ;
