@@ -32,14 +32,15 @@ demo:Time a owl:Class ;
 demo:Person a owl:Class;
     rdfs:label "Person" ;
     ns1:definition "Person." ;
-    rdfs:subClassOf sio:SIO_000498 .
+    rdfs:subClassOf sio:Human .
 
 demo:Activity a owl:Class ;
     rdfs:label "Activity" ;
     ns1:definition "Activity." .
 
 demo:activityComponents a owl:Class;
-    rdfs:label "Activity Components";
+
+rdfs:label "Activity Components";
     rdfs:subClassOf hasco:SampleIndicator.
 
 demo:activityLevel a owl:Class;
@@ -62,9 +63,7 @@ demo:heartBeat rdf:type owl:ObjectProperty ;
     ns1:definition  "Heart Beat";
     rdfs:subClassOf hasco:SampleIndicator.
 
-fma:X76JX rdf:type owl:ObjectProperty ;
-    rdfs:label "Heart Beat";
-    ns1:definition  "Heart Beat";
+fma:X76JX rdfs:label "Heart Beat";
     rdfs:subClassOf hasco:SampleIndicator.
 
 demo:activeDuration  rdf:type owl:ObjectProperty ;
