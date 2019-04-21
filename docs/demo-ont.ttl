@@ -9,6 +9,8 @@
 @prefix demo: <http://hadatac.org/ont/demo#> .
 @prefix hasco: <http://hadatac.org/ont/hasco/> .
 @prefix sio: <http://semanticscience.org/resource/> .
+@prefix fma: <http://purl.bioontology.org/ontology/RCD/> .
+
 
 <http://hadatac.org/ont/demo> a owl:Ontology ;
     rdfs:comment """Demo ontology for HADatAc""" ;
@@ -60,6 +62,8 @@ demo:heartBeat rdf:type owl:ObjectProperty ;
     ns1:definition  "Heart Beat";
     rdfs:subClassOf hasco:SampleIndicator.
 
+fma:X76JX rdfs:label "Heart Beat";
+    rdfs:subClassOf hasco:SampleIndicator.
 
 demo:activeDuration  rdf:type owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
