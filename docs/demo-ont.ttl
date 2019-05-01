@@ -9,7 +9,7 @@
 @prefix demo: <http://hadatac.org/ont/demo#> .
 @prefix hasco: <http://hadatac.org/ont/hasco/> .
 @prefix sio: <http://semanticscience.org/resource/> .
-@prefix fma: <http://purl.bioontology.org/ontology/RCD/> .
+@prefix ctv3: <http://purl.bioontology.org/ontology/RCD/> .
 
 
 <http://hadatac.org/ont/demo> a owl:Ontology ;
@@ -59,11 +59,11 @@ demo:calories rdf:type owl:ObjectProperty ;
     rdfs:domain demo:Activity .
 
 demo:heartBeat rdf:type owl:ObjectProperty ;
-    rdfs:label "Heart Beat";
-    ns1:definition  "Heart Beat";
+    rdfs:label "Heart Rate";
+    ns1:definition  "Heart Rate";
     rdfs:subClassOf hasco:SampleIndicator.
 
-fma:X76JX rdfs:label "Heart Beat";
+ctv3:X76JX rdfs:label "Heart Rate";
     rdfs:subClassOf hasco:SampleIndicator.
 
 demo:activeDuration  rdf:type owl:ObjectProperty ;
