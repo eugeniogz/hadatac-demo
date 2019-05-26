@@ -63,7 +63,7 @@ demo:heartBeat rdf:type owl:ObjectProperty ;
     ns1:definition  "Heart Rate";
     rdfs:subClassOf hasco:SampleIndicator.
 
-ctv3:X76JX rdfs:label "Pulsação";
+ctv3:X76JX rdfs:label "Heart Beat";
     rdfs:subClassOf hasco:SampleIndicator.
 
 demo:activeDuration  rdf:type owl:ObjectProperty ;
